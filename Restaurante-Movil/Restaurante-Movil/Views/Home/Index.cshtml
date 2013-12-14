@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "Página principal";
+}
+
+<h2>@ViewBag.Message</h2>
+<p>
+    Para obtener más información sobre ASP.NET MVC, visite el <a href="http://asp.net/mvc" title="sitio web de ASP.NET MVC">http://asp.net/mvc</a>.
+</p>
+
+<ul data-role="listview" data-inset="true">
+    <li data-role="list-divider">Exploración</li>
+    <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
+    <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
+</ul>
