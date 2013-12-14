@@ -1,10 +1,13 @@
-﻿@{
+﻿@using System.Data;
+@using System.Dynamic;
+
+@{
     ViewBag.Title = "Página principal";
 }
 
-<h2>@ViewBag.Message</h2>
+<h2>Inventario</h2>
 <p>
-    Para obtener más información sobre ASP.NET MVC, visite el <a href="http://asp.net/mvc" title="sitio web de ASP.NET MVC">http://asp.net/mvc</a>.
+    Puedes realizar búsquedas y actualizar información de Ingredientes.
 </p>
 
 <ul data-role="listview" data-inset="true">
@@ -12,3 +15,27 @@
     <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
     <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
 </ul>
+
+
+@{
+    DataTable table = ViewBag.table;
+    var result = new List<dynamic>();
+    foreach (DataRow row in table.Rows){
+        var obj = (IDictionary<string, object>)new ExpandoObject();
+        foreach (DataColumn col in table.Columns)
+        {
+            obj.Add(col.ColumnName, row[col.ColumnName]);
+        }
+        result.Add(obj);
+    }
+    var grid = new WebGrid(result);
+    grid.Pager(WebGridPagerModes.NextPrevious);
+}
+<div>
+    @grid.GetHtml(
+            tableStyle: "gridTable",
+            headerStyle: "gridHead",
+            footerStyle: "gridFooter",
+            rowStyle: "gridRow",
+            alternatingRowStyle: "gridAltRow")
+</div>
