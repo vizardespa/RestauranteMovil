@@ -1,0 +1,31 @@
+﻿@model Restaurante_Movil.Models.Ingrediente
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <div>
+        @Html.Label("Nombre")
+        @Html.TextBoxFor(model => model.Nombre)
+    </div>
+    <div>
+        @Html.Label("Tipo Ingrediente")
+        @Html.DropDownListFor(model => model.Tipo, new[] { 
+       new SelectListItem() { Text = "Seleccionar", Value = "0" },
+       new SelectListItem() { Text = "Jugo", Value = "1" },
+       new SelectListItem() { Text = "Alcohol", Value = "2" },
+       new SelectListItem() { Text = "Fruta", Value = "3" } })
+    </div>
+    <div>
+        @Html.Label("Cantidad")
+        @Html.TextBoxFor(model => model.Cantidad)
+    </div>
+    <p>
+        <input type="submit" value="Agregar" />
+    </p>
+}
