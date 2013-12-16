@@ -1,9 +1,6 @@
-﻿@using System.Data;
+﻿@model Restaurante_Movil.Models.Consulta
+@using System.Data;
 @using System.Dynamic;
-
-@{
-    ViewBag.Title = "Página principal";
-}
 
 <h2>Inventario</h2>
 <p>
@@ -16,6 +13,29 @@
     <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
     <li>@Html.ActionLink("Agregar", "Index", "Agregar")</li>
 </ul>
+
+<p>Buscar Ingredientes</p>
+
+<form method="post">
+    @Html.Label("Por:")
+    @Html.DropDownListFor(model => model.by, new[] {
+    new SelectListItem() {Value="0",Text="ID"},
+    new SelectListItem() {Value="1",Text="Nombre"},
+    new SelectListItem() {Value="2",Text="Tipo"},
+    new SelectListItem() {Value="3",Text="Cantidad"}}, new { id = "filtro" })
+
+    <div id="div_tipo_ingrediente">
+        @Html.Label("Tipo de ingrediente:")
+        @Html.DropDownListFor(model => model.type, (List<SelectListItem>)ViewBag.Tipos, new { id = "ddl_tipo" })
+    </div>
+
+    <div id="div_palabra_clave">
+        @Html.Label("Palabra clave:")
+        @Html.TextBoxFor(model => model.keyword)
+    </div>
+
+    <input type="submit" value="CONSULTAR" />
+</form>
 
 
 @{
@@ -40,3 +60,22 @@
             rowStyle: "gridRow",
             alternatingRowStyle: "gridAltRow")
 </div>
+
+<script>
+    $(document).ready(function () {
+        $("#div_tipo_ingrediente").hide();
+        $("#filtro").change(function () {
+            var selectedIndex = $("#filtro").val();
+
+            if (selectedIndex == 2) { // Tipo de Ingrediente.
+                $("#div_tipo_ingrediente").show();
+                $("#div_palabra_clave").hide();
+            }
+            else {
+                $("#div_tipo_ingrediente").hide();
+                $("#div_palabra_clave").show();
+            }
+        });
+
+    });
+</script>
