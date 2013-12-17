@@ -1,0 +1,11 @@
+C:\Users\Carlos\Desktop\Restaurante\Commons\bin\Debug\Commons.dll.config
+C:\Users\Carlos\Desktop\Restaurante\Commons\bin\Debug\Commons.dll
+C:\Users\Carlos\Desktop\Restaurante\Commons\bin\Debug\Commons.pdb
+C:\Users\Carlos\Desktop\Restaurante\Commons\obj\Debug\Commons.dll
+C:\Users\Carlos\Desktop\Restaurante\Commons\obj\Debug\Commons.pdb
+C:\Users\Carlos\Documents\Visual Studio 2012\Projects\Restaurante\Commons\bin\Debug\Commons.dll.config
+C:\Users\Carlos\Documents\Visual Studio 2012\Projects\Restaurante\Commons\bin\Debug\Commons.dll
+C:\Users\Carlos\Documents\Visual Studio 2012\Projects\Restaurante\Commons\bin\Debug\Commons.pdb
+C:\Users\Carlos\Documents\Visual Studio 2012\Projects\Restaurante\Commons\obj\Debug\Commons.csprojResolveAssemblyReference.cache
+C:\Users\Carlos\Documents\Visual Studio 2012\Projects\Restaurante\Commons\obj\Debug\Commons.dll
+C:\Users\Carlos\Documents\Visual Studio 2012\Projects\Restaurante\Commons\obj\Debug\Commons.pdb

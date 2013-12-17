@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProgAvanzada_ArqSoftware_RestauranteModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ProgAvanzada_ArqSoftware_RestauranteModelStoreContainer">
+    <EntitySet Name="Empleado" EntityType="ProgAvanzada_ArqSoftware_RestauranteModel.Store.Empleado" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Entidad" EntityType="ProgAvanzada_ArqSoftware_RestauranteModel.Store.Entidad" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Ingrediente" EntityType="ProgAvanzada_ArqSoftware_RestauranteModel.Store.Ingrediente" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Proveedor" EntityType="ProgAvanzada_ArqSoftware_RestauranteModel.Store.Proveedor" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Empleado">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Nombre" Type="nchar" Nullable="false" MaxLength="50" />
+    <Property Name="Apellido" Type="nchar" Nullable="false" MaxLength="50" />
+    <Property Name="Puesto" Type="smallint" Nullable="false" />
+    <Property Name="Sueldo" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="Contratacion" Type="date" Nullable="false" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Entidad">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Tipo" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Ingrediente">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Nombre" Type="nchar" Nullable="false" MaxLength="50" />
+    <Property Name="Tipo" Type="smallint" Nullable="false" />
+    <Property Name="Cantidad" Type="decimal" Nullable="false" Scale="2" />
+  </EntityType>
+  <EntityType Name="Proveedor">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Nombre" Type="nchar" Nullable="false" MaxLength="50" />
+    <Property Name="Telefono" Type="bigint" Nullable="false" />
+    <Property Name="Deuda" Type="decimal" Nullable="false" Scale="2" />
+  </EntityType>
+  <Function Name="Insert_Empleado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Nombre" Type="nchar" Mode="In" />
+    <Parameter Name="Apellido" Type="nchar" Mode="In" />
+    <Parameter Name="Puesto" Type="smallint" Mode="In" />
+    <Parameter Name="Sueldo" Type="decimal" Mode="In" />
+    <Parameter Name="Contratacion" Type="date" Mode="In" />
+    <Parameter Name="Activo" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="Insert_Ingrediente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Nombre" Type="nchar" Mode="In" />
+    <Parameter Name="Tipo" Type="smallint" Mode="In" />
+    <Parameter Name="Cantidad" Type="decimal" Mode="In" />
+  </Function>
+  <Function Name="Insert_Proveedor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Nombre" Type="nchar" Mode="In" />
+    <Parameter Name="Telefono" Type="bigint" Mode="In" />
+    <Parameter Name="Deuda" Type="decimal" Mode="In" />
+  </Function>
+  <!--Errors Found During Generation:
+      warning 6013: The table/view 'ProgAvanzada_ArqSoftware_Restaurante.dbo.Proveedor_Ingrediente' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="Proveedor_Ingrediente">
+        <Property Name="Id_Proveedor" Type="int" />
+        <Property Name="Id_Ingrediente" Type="int" />
+      </EntityType>-->
+</Schema>

@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProgAvanzada_ArqSoftware_RestauranteModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="ProgAvanzada_ArqSoftware_RestauranteEntities" p1:LazyLoadingEnabled="false">
+    <EntitySet Name="Empleadoes" EntityType="ProgAvanzada_ArqSoftware_RestauranteModel.Empleado" />
+    <EntitySet Name="Entidads" EntityType="ProgAvanzada_ArqSoftware_RestauranteModel.Entidad" />
+    <EntitySet Name="Ingredientes" EntityType="ProgAvanzada_ArqSoftware_RestauranteModel.Ingrediente" />
+    <EntitySet Name="Proveedors" EntityType="ProgAvanzada_ArqSoftware_RestauranteModel.Proveedor" />
+    <FunctionImport Name="Insert_Empleado">
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Apellido" Mode="In" Type="String" />
+      <Parameter Name="Puesto" Mode="In" Type="Int16" />
+      <Parameter Name="Sueldo" Mode="In" Type="Decimal" />
+      <Parameter Name="Contratacion" Mode="In" Type="DateTime" />
+      <Parameter Name="Activo" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="Insert_Ingrediente">
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Tipo" Mode="In" Type="Int16" />
+      <Parameter Name="Cantidad" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="Insert_Proveedor">
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Telefono" Mode="In" Type="Int64" />
+      <Parameter Name="Deuda" Mode="In" Type="Decimal" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="Empleado">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="true" />
+    <Property Name="Apellido" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="true" />
+    <Property Name="Puesto" Type="Int16" Nullable="false" />
+    <Property Name="Sueldo" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Contratacion" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Activo" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Entidad">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Tipo" Type="Int16" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Ingrediente">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="true" />
+    <Property Name="Tipo" Type="Int16" Nullable="false" />
+    <Property Name="Cantidad" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="Proveedor">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="true" />
+    <Property Name="Telefono" Type="Int64" Nullable="false" />
+    <Property Name="Deuda" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+  </EntityType>
+</Schema>

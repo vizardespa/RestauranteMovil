@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.UI;
+using Business;
 
 namespace Restaurante_Movil.Controllers
 {
@@ -42,7 +43,7 @@ namespace Restaurante_Movil.Controllers
             dt.Columns.Add("Tipo");
             dt.Columns.Add("Cantidad");
 
-            foreach (Models.Ingrediente i in list)
+            foreach (Ingrediente i in list)
             {
                 dt.Rows.Add(new object[4]{
                     i.Id,
@@ -55,11 +56,9 @@ namespace Restaurante_Movil.Controllers
         }
         private List<Ingrediente> GetIngredientes()
         {
-            List<Ingrediente> list = new List<Models.Ingrediente>();
+            List<Ingrediente> list = new List<Ingrediente>();
 
-            // Consumir Service para obtener todos los ingredientes y guardarlos en List<>.
-            /*
-            var ingredientes = new Restaurante_Services().ServiceClient().ObtenersIngredientesAsync().Result;
+            var ingredientes = new Read().GetAllIngredientes();
             foreach (var i in ingredientes)
                 list.Add(new Ingrediente
                 {
@@ -69,13 +68,13 @@ namespace Restaurante_Movil.Controllers
                     StringTipoIngrediente = i.StringTipoIngrediente,
                     Cantidad = i.Cantidad
                 });
-            */
+            
             return list;
         }
         private List<Ingrediente> SearchIngredientes(Consulta model)
         {
             List<Ingrediente> list = new List<Ingrediente>();
-
+            
             object value;
             int x;
             if (model.by == 0 && int.TryParse(model.keyword, out x))
@@ -85,8 +84,7 @@ namespace Restaurante_Movil.Controllers
             else
                 value = model.keyword as string;
 
-            /*
-            var ingredientes = serviceclient.BuscarIngredientes(model.by, value).Result;
+            var ingredientes = new Read().ReadIngredientes((short)model.by, value);
             foreach (var i in ingredientes)
                 list.Add(new Ingrediente
                 {
@@ -96,12 +94,12 @@ namespace Restaurante_Movil.Controllers
                     StringTipoIngrediente = i.StringTipoIngrediente,
                     Cantidad = i.Cantidad
                 });
-            */
+            
             return list;
         }
         private void SetTiposIngrediente(List<SelectListItem> list)
         {
-            for (int i = 0; i <= Ingrediente.AmountTipos; i++)
+            for (int i = 1; i <= Ingrediente.AmountTipos; i++)
             {
                 list.Add(new SelectListItem
                 {

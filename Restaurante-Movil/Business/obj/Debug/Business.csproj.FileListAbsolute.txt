@@ -1,0 +1,48 @@
+C:\Users\Carlos\Desktop\Restaurante\Business\bin\Debug\Business.dll
+C:\Users\Carlos\Desktop\Restaurante\Business\bin\Debug\Business.pdb
+C:\Users\Carlos\Desktop\Restaurante\Business\bin\Debug\Commons.dll
+C:\Users\Carlos\Desktop\Restaurante\Business\bin\Debug\Data.dll
+C:\Users\Carlos\Desktop\Restaurante\Business\bin\Debug\EntityFramework.dll
+C:\Users\Carlos\Desktop\Restaurante\Business\bin\Debug\Commons.pdb
+C:\Users\Carlos\Desktop\Restaurante\Business\bin\Debug\Data.pdb
+C:\Users\Carlos\Desktop\Restaurante\Business\bin\Debug\EntityFramework.xml
+C:\Users\Carlos\Desktop\Restaurante\Business\obj\Debug\Business.csprojResolveAssemblyReference.cache
+C:\Users\Carlos\Desktop\Restaurante\Business\obj\Debug\Business.dll
+C:\Users\Carlos\Desktop\Restaurante\Business\obj\Debug\Business.pdb
+C:\Users\Carlos\Documents\Visual Studio 2012\Projects\Restaurante - Copy\Business\bin\Debug\Business.dll.config
+C:\Users\Carlos\Documents\Visual Studio 2012\Projects\Restaurante - Copy\Business\bin\Debug\Business.dll
+C:\Users\Carlos\Documents\Visual Studio 2012\Projects\Restaurante - Copy\Business\bin\Debug\Business.pdb
+C:\Users\Carlos\Documents\Visual Studio 2012\Projects\Restaurante - Copy\Business\bin\Debug\Commons.dll
+C:\Users\Carlos\Documents\Visual Studio 2012\Projects\Restaurante - Copy\Business\bin\Debug\Data.dll
+C:\Users\Carlos\Documents\Visual Studio 2012\Projects\Restaurante - Copy\Business\bin\Debug\EntityFramework.dll
+C:\Users\Carlos\Documents\Visual Studio 2012\Projects\Restaurante - Copy\Business\bin\Debug\Commons.pdb
+C:\Users\Carlos\Documents\Visual Studio 2012\Projects\Restaurante - Copy\Business\bin\Debug\Data.pdb
+C:\Users\Carlos\Documents\Visual Studio 2012\Projects\Restaurante - Copy\Business\bin\Debug\EntityFramework.xml
+C:\Users\Carlos\Documents\Visual Studio 2012\Projects\Restaurante - Copy\Business\obj\Debug\Business.csprojResolveAssemblyReference.cache
+C:\Users\Carlos\Documents\Visual Studio 2012\Projects\Restaurante - Copy\Business\obj\Debug\Business.dll
+C:\Users\Carlos\Documents\Visual Studio 2012\Projects\Restaurante - Copy\Business\obj\Debug\Business.pdb
+C:\Users\Carlos\Documents\Visual Studio 2012\Projects\Restaurante\Business\bin\Debug\Business.dll.config
+C:\Users\Carlos\Documents\Visual Studio 2012\Projects\Restaurante\Business\bin\Debug\Business.dll
+C:\Users\Carlos\Documents\Visual Studio 2012\Projects\Restaurante\Business\bin\Debug\Business.pdb
+C:\Users\Carlos\Documents\Visual Studio 2012\Projects\Restaurante\Business\bin\Debug\Commons.dll
+C:\Users\Carlos\Documents\Visual Studio 2012\Projects\Restaurante\Business\bin\Debug\Data.dll
+C:\Users\Carlos\Documents\Visual Studio 2012\Projects\Restaurante\Business\bin\Debug\EntityFramework.dll
+C:\Users\Carlos\Documents\Visual Studio 2012\Projects\Restaurante\Business\bin\Debug\Commons.pdb
+C:\Users\Carlos\Documents\Visual Studio 2012\Projects\Restaurante\Business\bin\Debug\Data.pdb
+C:\Users\Carlos\Documents\Visual Studio 2012\Projects\Restaurante\Business\bin\Debug\EntityFramework.xml
+C:\Users\Carlos\Documents\Visual Studio 2012\Projects\Restaurante\Business\obj\Debug\Business.csprojResolveAssemblyReference.cache
+C:\Users\Carlos\Documents\Visual Studio 2012\Projects\Restaurante\Business\obj\Debug\Business.dll
+C:\Users\Carlos\Documents\Visual Studio 2012\Projects\Restaurante\Business\obj\Debug\Business.pdb
+C:\Users\Carlos\Documents\GitHub\RestauranteMovil\Restaurante-Movil\Business\bin\Debug\Business.dll.config
+C:\Users\Carlos\Documents\GitHub\RestauranteMovil\Restaurante-Movil\Business\bin\Debug\Business.dll
+C:\Users\Carlos\Documents\GitHub\RestauranteMovil\Restaurante-Movil\Business\bin\Debug\Business.pdb
+C:\Users\Carlos\Documents\GitHub\RestauranteMovil\Restaurante-Movil\Business\bin\Debug\Commons.dll
+C:\Users\Carlos\Documents\GitHub\RestauranteMovil\Restaurante-Movil\Business\bin\Debug\Data.dll
+C:\Users\Carlos\Documents\GitHub\RestauranteMovil\Restaurante-Movil\Business\bin\Debug\EntityFramework.dll
+C:\Users\Carlos\Documents\GitHub\RestauranteMovil\Restaurante-Movil\Business\bin\Debug\Commons.pdb
+C:\Users\Carlos\Documents\GitHub\RestauranteMovil\Restaurante-Movil\Business\bin\Debug\Data.pdb
+C:\Users\Carlos\Documents\GitHub\RestauranteMovil\Restaurante-Movil\Business\bin\Debug\EntityFramework.xml
+C:\Users\Carlos\Documents\GitHub\RestauranteMovil\Restaurante-Movil\Business\bin\Debug\es\EntityFramework.resources.dll
+C:\Users\Carlos\Documents\GitHub\RestauranteMovil\Restaurante-Movil\Business\obj\Debug\Business.csprojResolveAssemblyReference.cache
+C:\Users\Carlos\Documents\GitHub\RestauranteMovil\Restaurante-Movil\Business\obj\Debug\Business.dll
+C:\Users\Carlos\Documents\GitHub\RestauranteMovil\Restaurante-Movil\Business\obj\Debug\Business.pdb

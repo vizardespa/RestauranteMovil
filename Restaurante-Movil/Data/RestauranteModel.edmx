@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ProgAvanzada_ArqSoftware_RestauranteModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="ProgAvanzada_ArqSoftware_RestauranteModelStoreContainer">
+          <EntitySet Name="Empleado" EntityType="ProgAvanzada_ArqSoftware_RestauranteModel.Store.Empleado" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Entidad" EntityType="ProgAvanzada_ArqSoftware_RestauranteModel.Store.Entidad" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Ingrediente" EntityType="ProgAvanzada_ArqSoftware_RestauranteModel.Store.Ingrediente" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Proveedor" EntityType="ProgAvanzada_ArqSoftware_RestauranteModel.Store.Proveedor" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="Empleado">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Nombre" Type="nchar" Nullable="false" MaxLength="50" />
+          <Property Name="Apellido" Type="nchar" Nullable="false" MaxLength="50" />
+          <Property Name="Puesto" Type="smallint" Nullable="false" />
+          <Property Name="Sueldo" Type="decimal" Nullable="false" Scale="2" />
+          <Property Name="Contratacion" Type="date" Nullable="false" />
+          <Property Name="Activo" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Entidad">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Tipo" Type="smallint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Ingrediente">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Nombre" Type="nchar" Nullable="false" MaxLength="50" />
+          <Property Name="Tipo" Type="smallint" Nullable="false" />
+          <Property Name="Cantidad" Type="decimal" Nullable="false" Scale="2" />
+        </EntityType>
+        <EntityType Name="Proveedor">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Nombre" Type="nchar" Nullable="false" MaxLength="50" />
+          <Property Name="Telefono" Type="bigint" Nullable="false" />
+          <Property Name="Deuda" Type="decimal" Nullable="false" Scale="2" />
+        </EntityType>
+        <Function Name="Insert_Empleado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Nombre" Type="nchar" Mode="In" />
+          <Parameter Name="Apellido" Type="nchar" Mode="In" />
+          <Parameter Name="Puesto" Type="smallint" Mode="In" />
+          <Parameter Name="Sueldo" Type="decimal" Mode="In" />
+          <Parameter Name="Contratacion" Type="date" Mode="In" />
+          <Parameter Name="Activo" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="Insert_Ingrediente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Nombre" Type="nchar" Mode="In" />
+          <Parameter Name="Tipo" Type="smallint" Mode="In" />
+          <Parameter Name="Cantidad" Type="decimal" Mode="In" />
+        </Function>
+        <Function Name="Insert_Proveedor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Nombre" Type="nchar" Mode="In" />
+          <Parameter Name="Telefono" Type="bigint" Mode="In" />
+          <Parameter Name="Deuda" Type="decimal" Mode="In" />
+        </Function>
+        <!--Errors Found During Generation:
+      warning 6013: The table/view 'ProgAvanzada_ArqSoftware_Restaurante.dbo.Proveedor_Ingrediente' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="Proveedor_Ingrediente">
+        <Property Name="Id_Proveedor" Type="int" />
+        <Property Name="Id_Ingrediente" Type="int" />
+      </EntityType>-->
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ProgAvanzada_ArqSoftware_RestauranteModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="ProgAvanzada_ArqSoftware_RestauranteEntities" p1:LazyLoadingEnabled="false">
+          <EntitySet Name="Empleadoes" EntityType="ProgAvanzada_ArqSoftware_RestauranteModel.Empleado" />
+          <EntitySet Name="Entidads" EntityType="ProgAvanzada_ArqSoftware_RestauranteModel.Entidad" />
+          <EntitySet Name="Ingredientes" EntityType="ProgAvanzada_ArqSoftware_RestauranteModel.Ingrediente" />
+          <EntitySet Name="Proveedors" EntityType="ProgAvanzada_ArqSoftware_RestauranteModel.Proveedor" />
+          <FunctionImport Name="Insert_Empleado">
+            <Parameter Name="Nombre" Mode="In" Type="String" />
+            <Parameter Name="Apellido" Mode="In" Type="String" />
+            <Parameter Name="Puesto" Mode="In" Type="Int16" />
+            <Parameter Name="Sueldo" Mode="In" Type="Decimal" />
+            <Parameter Name="Contratacion" Mode="In" Type="DateTime" />
+            <Parameter Name="Activo" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="Insert_Ingrediente">
+            <Parameter Name="Nombre" Mode="In" Type="String" />
+            <Parameter Name="Tipo" Mode="In" Type="Int16" />
+            <Parameter Name="Cantidad" Mode="In" Type="Decimal" />
+          </FunctionImport>
+          <FunctionImport Name="Insert_Proveedor">
+            <Parameter Name="Nombre" Mode="In" Type="String" />
+            <Parameter Name="Telefono" Mode="In" Type="Int64" />
+            <Parameter Name="Deuda" Mode="In" Type="Decimal" />
+          </FunctionImport>
+        </EntityContainer>
+        <EntityType Name="Empleado">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="true" />
+          <Property Name="Apellido" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="true" />
+          <Property Name="Puesto" Type="Int16" Nullable="false" />
+          <Property Name="Sueldo" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="Contratacion" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Activo" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Entidad">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Tipo" Type="Int16" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Ingrediente">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="true" />
+          <Property Name="Tipo" Type="Int16" Nullable="false" />
+          <Property Name="Cantidad" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityType Name="Proveedor">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="true" />
+          <Property Name="Telefono" Type="Int64" Nullable="false" />
+          <Property Name="Deuda" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ProgAvanzada_ArqSoftware_RestauranteModelStoreContainer" CdmEntityContainer="ProgAvanzada_ArqSoftware_RestauranteEntities">
+          <EntitySetMapping Name="Empleadoes">
+            <EntityTypeMapping TypeName="ProgAvanzada_ArqSoftware_RestauranteModel.Empleado">
+              <MappingFragment StoreEntitySet="Empleado">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+                <ScalarProperty Name="Puesto" ColumnName="Puesto" />
+                <ScalarProperty Name="Sueldo" ColumnName="Sueldo" />
+                <ScalarProperty Name="Contratacion" ColumnName="Contratacion" />
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Entidads">
+            <EntityTypeMapping TypeName="ProgAvanzada_ArqSoftware_RestauranteModel.Entidad">
+              <MappingFragment StoreEntitySet="Entidad">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Ingredientes">
+            <EntityTypeMapping TypeName="ProgAvanzada_ArqSoftware_RestauranteModel.Ingrediente">
+              <MappingFragment StoreEntitySet="Ingrediente">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+                <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Proveedors">
+            <EntityTypeMapping TypeName="ProgAvanzada_ArqSoftware_RestauranteModel.Proveedor">
+              <MappingFragment StoreEntitySet="Proveedor">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Deuda" ColumnName="Deuda" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="Insert_Empleado" FunctionName="ProgAvanzada_ArqSoftware_RestauranteModel.Store.Insert_Empleado" />
+          <FunctionImportMapping FunctionImportName="Insert_Ingrediente" FunctionName="ProgAvanzada_ArqSoftware_RestauranteModel.Store.Insert_Ingrediente" />
+          <FunctionImportMapping FunctionImportName="Insert_Proveedor" FunctionName="ProgAvanzada_ArqSoftware_RestauranteModel.Store.Insert_Proveedor" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
